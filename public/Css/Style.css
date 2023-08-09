@@ -1,0 +1,70 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.fundo{
+    background-image: url(../Images/retrato.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.user{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.3rem;
+    color: #ffffff;
+}
+.img-card{
+    height: 30rem !important;
+}
+.input{
+    background-color: #161616ee !important;
+    border-radius: 12px !important;
+    border: 2px solid #fff;
+    display: block;
+    color: #fff;
+
+}
+.input::placeholder{
+    color: #fff !important;
+}
+
+.color{
+    background-color: #000000de;
+    backdrop-filter: blur(6px);
+
+}
+.botao{
+    background-color: #41071bf8 !important;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+  }
+
+a{
+    text-decoration: none !important;
+}
+.text{
+    text-decoration: none;
+}
+.botao:hover{
+    text-decoration: none;
+    outline: none;
+}
+#botao{
+    color: #fff;
+    border: 1px solid #fff;
+   
+}
+.link{
+    color: #fff !important;
+    font-weight: 100;
+   font-size: 0.9rem !important;
+   text-align: center  !important; 
+}
+.card{
+    border: 0.2px solid #fff !important;
+
+}
