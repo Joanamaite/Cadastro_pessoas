@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918&family=Jacques+Francois&display=swap');
+
 *{
     margin: 0%;
     padding: 0%;
+    border: 0%;
 }
 .fundo{
     background-image: url(../Images/retrato.jpg);
@@ -8,7 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .user{
@@ -67,4 +69,291 @@ a{
 .card{
     border: 0.2px solid #fff !important;
 
+}
+.header{
+    display: flex;
+}
+.imagem_banner{
+    margin-top: -4rem;
+    width: 100%;
+    height: 95vh;
+  background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(/Images/banner3.png);
+  background: linear-gradient(to top #000000,#000000, #000000 ) !important;
+}
+.navbar{
+    z-index: 2 !important;
+}
+.body{
+    background-color: #000000;
+    border: none !important;
+}
+
+.body::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, #000000,#000000,transparent) !important;
+    z-index: 100000 !important;
+    height: 20%;
+    width: 100%;
+    border: none !important;
+}
+
+.nav-link{
+    color: #ffff !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+.titulo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fffffff8;
+    font-size: 4vw;
+    font-family: 'Brygada 1918', serif;
+    font-family: 'Jacques Francois', serif;
+}
+.subtitulo{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fffffff8;
+    font-family: 'Brygada 1918', serif;
+    font-size: 1.2vw;
+}
+.titulo_home{
+    margin-top: 2rem;
+    text-align: center;
+    color: #fff;
+    font-family: 'Brygada 1918', serif;
+    font-family: 'Jacques Francois', serif;
+}
+.subtitulo_home{
+    color: #fffffff8;
+    font-family: 'Brygada 1918', serif;
+    font-size: 1.5vw;
+    margin-top: 1rem;
+    width: 40rem;
+    text-align: center;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3vw;
+
+}
+.texto{
+    margin-left: 22rem;
+}
+
+.nomes_pessoas{
+    color: #fffffff8;
+    font-family: 'Brygada 1918', serif;
+    font-size: 1.5vw;
+    margin-top: 22rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container {
+	height: 35rem;
+	position: absolute;
+    margin-left: 7rem;
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.cover {
+  display: inline-block;
+  width: 30%;
+  height: 60vh;
+	border-radius: 8px;
+}
+
+@media screen and (max-width: 700px) {
+	.container {
+		width : 100%;
+		position: relative;
+		transform: translate(0%, 0%);
+		top: 0;
+		left: 0;
+	}
+	.cover {
+		display: block;
+		height: 200px;
+		width: 320px;
+		margin: 15px auto;
+	}
+}
+
+.atvImg {
+	border-radius: 8px;
+	transform-style: preserve-3d;
+	-webkit-tap-highlight-color: rgba(#000,0);
+}
+
+.atvImg img {
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(14,21,47,0.25);
+}
+
+.atvImg-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	transition: all 0.2s ease-out;
+}
+
+.atvImg-container.over .atvImg-shadow {
+	box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
+}
+
+.atvImg-layers {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	transform-style: preserve-3d;
+}
+
+.atvImg-rendered-layer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%; 
+	left: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	background-size: cover;
+	transition: all 0.1s ease-out;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.atvImg-shadow {
+	position: absolute;
+	top: 5%; 
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	transition: all 0.2s ease-out;
+	box-shadow: 0 8px 30px rgba(14,21,47,0.6);
+}
+
+.atvImg-shine {
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0;
+	border-radius: 8px;
+	background: linear-gradient(135deg, rgba(255,255,255,.25) 0%,rgba(255,255,255,0) 60%);
+}
+/* CSS */
+.button-52 {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 40px 13px;
+    outline: 0;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-52:after {
+    content: "";
+    background-color: #ffffff;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .button-52:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+  
+  @media (min-width: 768px) {
+    .button-52 {
+      padding: 13px 50px 13px;
+    }
+  }
+  
+  ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40rem;
+    background-color: #f8f8f8d7;
+
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:var(--black);
+    padding: 1rem 0;
+    height: 5rem;
+}
+
+.footer .credit span{
+    color: #ffffff;
+
+
+}
+.credit{
+    font-family: 'Brygada 1918', serif !important;
+    font-family: 'Jacques Francois', serif !important;
+    font-size: 1.8rem !important;
+    
+}
+
+.footer .follow{
+    padding: 1rem 0;
+}
+
+.footer .follow a{
+    height:4rem;
+    line-height:4rem;
+    width:4rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    background:var(--black);
+    color:#000000;
+    margin:0 .1rem;
+    text-align: center;
+}
+
+.footer .follow a:hover{
+    background-color: #000000;
+    color: #fff;
 }
