@@ -126,6 +126,15 @@ a{
     font-family: 'Brygada 1918', serif;
     font-size: 1.2vw;
 }
+.subtitulo{
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fffffff8;
+  font-family: 'Brygada 1918', serif;
+  font-size: 1.2vw;
+}
 .titulo_home{
     margin-top: 2rem;
     text-align: center;
@@ -142,16 +151,12 @@ a{
     text-align: center;
     font-weight: 100;
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2vw;
 
 }
 .texto{
-    margin-left: 18rem;
+  justify-content: center !important;
 }
+
 
 .nomes_pessoas{
     color: #fffffff8;
