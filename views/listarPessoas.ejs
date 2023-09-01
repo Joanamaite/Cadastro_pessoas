@@ -6,7 +6,7 @@
     <h1 class="titulo">REGISTROS</h1>
     <p class="subtitulo">Site para registro de pessoas</p>
   </div>
-
+  <form action="/registro/listar" method="get">
      <% pessoas.forEach(pessoa => { %>
     <article class="card card--1 mt-5">
       <div class="card__info-hover">
@@ -36,4 +36,5 @@
       </div>
     </article>  
     <% }); %>
+  </form>
       </section>

@@ -143,14 +143,15 @@ a{
     font-family: 'Jacques Francois', serif;
 }
 .subtitulo_home{
-    color: #fffffff8;
-    font-family: 'Brygada 1918', serif;
-    font-size: 1.5vw;
-    margin-top: 1rem;
-    width: 40rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff;
+  font-family: 'Brygada 1918', serif;
+  font-family: 'Jacques Francois', serif;
     text-align: center;
-    font-weight: 100;
-    display: flex;
+    font-size: 2vw;
+    margin-left: 8rem;
+    margin-right: 8rem;
 
 }
 .texto{
@@ -174,9 +175,9 @@ body {
 .container {
   height: 35rem;
 	position: absolute;
-    margin-left: 2rem;
     margin-top: 3rem;
     width: 100%;
+    margin-left: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -568,14 +569,15 @@ border: 1px solid #d7d7d7;
 }
 
 .login .enviar {
-  background-color: #ae0004;
+  background-color: #ffffff;
   border: none;
   padding: 12px 60px;
   border-radius: 40px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .login .enviar:hover, .login .enviar:focus {
   background-color: #000;
+  color: #fff;
   outline: none;
 }
 .login .enviar:focus {
@@ -634,7 +636,7 @@ border: 1px solid #d7d7d7;
 .login span {
     position: absolute;
  /* color: #ae0004; */
-  color:#f80006;
+  color:#ffffff;
   opacity:1;
  top: 40px;
 left: 50px;

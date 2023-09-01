@@ -16,7 +16,7 @@ async function usuarioLogin(req, res) {
             res.redirect('/home');
         } else {
             console.log("usuario Errado");
-            res.redirect('/cadastrar');
+            res.redirect('/usuario/inserir');
         }
         
     } catch (error) {

@@ -19,11 +19,11 @@ async function cadastroUsuario(req, res) {
             return res.redirect('/home');
         } else {
             console.log('Erro ao cadastrar usuário');
-            return res.redirect('/cadastrar'); 
+            return res.redirect('/usuario/inserir'); 
         }
     } catch (error) {
         console.error('Erro ao cadastrar usuário:', error);
-        res.redirect('/cadastrar');
+        res.redirect('/usuario/inserir');
     }
 }
 

@@ -29,11 +29,11 @@ app.get('/', (req, res)=>{
     usuarioController.getLogin(req, res);
  
 })
-app.post('/cadastrar', (req, res)=>{
+app.post('/usuario/inserir', (req, res)=>{
  cadastroController.cadastroUsuario(req, res);
 });
 
-app.get('/cadastrar', (req, res)=>{
+app.get('/usuario/inserir', (req, res)=>{
     app.set('layout', "./layout/Default/login");
     usuarioController.usuarioCadastro(req, res);
 });
