@@ -12,22 +12,24 @@
                 <img src="./Images/retrato1.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body color">
+              <form action="/cadastrar" method="post">
                 <p class="card-text text-center user mt-2">USER CADASTRO</p>
                 <div class="input-group flex-nowrap d-flex justify-content-center align-items-center">
                     <div class="col-sm-8" ng-controller="Rest">
-                        <input type="text" class="form-control input" id="input" placeholder="Nome" aria-label="Username" aria-describedby="addon-wrapping">
-                      <input type="text" class="form-control input mt-3" id="input" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
-                      <input type="text" class="form-control input mt-3" id="input" placeholder="Senha" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="text" class="form-control input" id="input" placeholder="Nome" aria-label="Username" aria-describedby="addon-wrapping" for="Nome" name="Nome" required>
+                      <input type="text" class="form-control input mt-3" id="input" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping" for="Email" name="Email" required>
+                      <input type="text" class="form-control input mt-3" id="input" placeholder="Senha" aria-label="Username" aria-describedby="addon-wrapping" for="Senha" name="Senha" required>
                     </div>
                   </div>
-                  <a href="/home">
+                  <a >
                     <div class="d-flex justify-content-center align-items-center mt-4 text">
                       <button class="btn col-sm-4 botao" id="botao">Enviar</button>
                     </div>
                   </a>
                   <div class="link mt-2">
-                    <a href="/" class="link">Já possui cadastro?</a>
+                    <a href="/cadastrar" class="link">Já possui cadastro?</a>
                   </div>
+                </form>
               </div>
             
         </div>

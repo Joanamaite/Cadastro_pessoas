@@ -9,14 +9,15 @@
     <div class="fundo d-flex justify-content-center align-items-center">
         <div class="card" style="width: 27rem;">
             <div class="d-flex justify-content-center align-items-center">
-                <img src="./Images/retrato.jpg" class="card-img-top" alt="...">
+                <img src="Images/retrato.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body color">
+              <form action="/" method="post">
                 <p class="card-text text-center user mt-2">USER LOGIN</p>
                 <div class="input-group flex-nowrap d-flex justify-content-center align-items-center">
                     <div class="col-sm-8" ng-controller="Rest">
-                      <input type="text" class="form-control input" id="input" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
-                      <input type="text" class="form-control input mt-3" id="input" placeholder="Senha" aria-label="Username" aria-describedby="addon-wrapping">
+                      <input type="text" class="form-control input" id="input" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping" for="Email" name="Email" required>
+                      <input type="text" class="form-control input mt-3" id="input" placeholder="Senha" aria-label="Username" aria-describedby="addon-wrapping" for="Senha" name="Senha" required>
                     </div>
                   </div>
                   <a href="/home">
@@ -25,8 +26,9 @@
                   </div>
                 </a>
                   <div class="link mt-2">
-                    <a href="/cadastrar" class="link">Não possui cadastro?</a>
+                    <a  class="link">Não possui cadastro?</a>
                   </div>
+                </form>
               </div>
             
         </div>
@@ -34,6 +36,5 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="./ScriptLogin.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </html>
