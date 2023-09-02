@@ -22,7 +22,7 @@ async function usuarioLogin(req, res) {
         
     } catch (error) {
         console.error('Erro ao realizar o login:', error);
-        res.redirect('/login');
+        res.redirect('/');
     }
 }
 

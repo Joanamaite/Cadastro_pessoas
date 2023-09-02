@@ -6,9 +6,12 @@ async function connect() {
             return global.connection;
         }
         const connection = await mysql.createConnection({
-            host: 'localhost',
+            url:'mysql://root:6AnLKs7iqvqz98sS86lq@containers-us-west-73.railway.app:7612/railway',
+            host: 'containers-us-west-73.railway.app',
             user: 'root',
-            database: 'CadastroPessoas'
+            database: 'railway', 
+            password: '6AnLKs7iqvqz98sS86lq',
+            port:'7612'
         });
 
         console.log("Conectou no MySQL!");
