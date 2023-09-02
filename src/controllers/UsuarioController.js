@@ -1,4 +1,5 @@
 const UsuarioModel = require('../models/usuarioModel');
+const cadastroModel = require('../models/cadatroModel');
 const session = require("express-session");
 async function usuarioLogin(req, res) {
     const { Email, Senha } = req.body;
@@ -44,5 +45,17 @@ function listarPessoa(req, res){
 function home(req, res){
     res.render("home");
 }
+async function atualiza(req, res){
+    try{
+        const  pessoas  = await cadastroModel.atualizarPessoa(); 
+        console.log(pessoas);
+        res.render('atualizar', {pessoas}); 
 
-module.exports ={usuarioLogin, usuarioCadastro, cadastroPessoa, getLogin, listarPessoa, home};
+    } catch (error) {
+        console.error('Erro ao buscar pessoas:', error);
+        res.redirect('/listar');
+    }
+    
+}
+
+module.exports ={usuarioLogin, usuarioCadastro, cadastroPessoa, getLogin, listarPessoa, home, atualiza};

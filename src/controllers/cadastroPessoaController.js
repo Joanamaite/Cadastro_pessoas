@@ -11,11 +11,11 @@ async function inserePessoa(req, res) {
             return res.redirect('/listar');
         } else {
             console.log('Erro ao cadastrar pessoa');
-            return res.redirect('/cadastro'); 
+            return res.redirect('/edit'); 
         }
     } catch (error) {
         console.error('Erro ao cadastrar usuário:', error);
-        res.redirect('/cadastro');
+        res.redirect('/edit');
     }
 }
 
