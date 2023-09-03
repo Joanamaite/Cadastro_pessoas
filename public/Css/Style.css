@@ -65,6 +65,7 @@ a{
     font-weight: 100;
    font-size: 0.9rem !important;
    text-align: center  !important; 
+   text-decoration: none !important;
 }
 .card{
     border: 0.2px solid #fff !important;
@@ -177,7 +178,7 @@ body {
 	position: absolute;
     margin-top: 3rem;
     width: 100%;
-    margin-left: 5rem;
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;

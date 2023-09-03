@@ -29,6 +29,40 @@ section {
   height:100%;
 }
 
+/* CSS */
+.button-31 {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 30px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 15px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-31:hover,
+.button-31:focus {
+  opacity: .75;
+}
+
 .cards {
     width: 100%;
     display: flex;
@@ -99,16 +133,14 @@ top: 0;
   
 }
 .card {
-  margin-right: 40px;
-  margin-left: 35px;
+  margin-right: 10px;
+  margin-left: 10px;
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
-    width: 50%;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
-  flex: 1 1 350px;
-  margin:5px;
+  min-width: 30%;
 }
 .card:hover {
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
@@ -160,8 +192,9 @@ background: linear-gradient(to top #000000,#000000, #000000 ) !important;
 }
 
 .card__info {
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px, rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
 z-index: 2;
-  background-color: #fff;
+  background-color: #ffffffb4;
   border-bottom-left-radius: 12px;
 border-bottom-right-radius: 12px;
    padding: 16px 24px 24px 24px;

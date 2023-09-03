@@ -59,6 +59,7 @@ app.get('/cadastro', (req, res)=>{
 }); 
 
 app.post('/cadastro',(req, res)=>{
+    
     cadastroPessoaController.inserePessoa(req, res);
 }); 
 
@@ -74,10 +75,12 @@ app.post('/deletarPessoa/:id', async (req, res) => {
     }
 });
 app.get('/edit/:id',(req, res)=>{
+    app.set('layout', "./layout/Default/login");
     atualizaController.mostrarFormularioEdicao(req, res);
 }) 
 
 app.post('/edit/:id', (req, res)=>{
+    app.set('layout', "./layout/Default/index");
     atualizaController.editarPessoa(req, res);
 } );
 

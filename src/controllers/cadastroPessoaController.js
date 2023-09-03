@@ -11,7 +11,7 @@ async function inserePessoa(req, res) {
             return res.redirect('/listar');
         } else {
             console.log('Erro ao cadastrar pessoa');
-            return res.redirect('/edit'); 
+            return res.redirect('/home'); 
         }
     } catch (error) {
         console.error('Erro ao cadastrar usuário:', error);
