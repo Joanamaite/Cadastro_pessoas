@@ -1,15 +1,31 @@
 const express = require('express');
-const cadastroController = require ("./src/controllers/cadastroController");
-const usuarioController = require ("./src/controllers/UsuarioController");
+const cadastroController = require ("./controllers/cadastroController");
+const usuarioController = require ("./controllers/UsuarioController");
 const expressLayout = require("express-ejs-layouts");
-const homeController = require ('./src/controllers/homeController');
-const cadastroPessoaController = require ('./src/controllers/cadastroPessoaController');
-const cadastroModel = require('./src/models/cadatroModel');
-const atualizaController= require('./src/controllers/atualizaController');
+const homeController = require ('./controllers/homeController');
+const cadastroPessoaController = require ('./controllers/cadastroPessoaController');
+const cadastroModel = require('./models/cadatroModel');
+const atualizaController= require('./controllers/atualizaController');
 const session = require("express-session");
-const autenticacao = require ("./src/controllers/midlewareController")
+const autenticacao = require ("./controllers/midlewareController");
+const deletaController = require ("./controllers/deletarController");
+const deslogarController = require ("./controllers/deslogarController");
 const app = express();
 const path = require('path');
+const multer = require('multer');
+app.use('/upload', express.static(__dirname + '/upload'));
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './upload');
+    },
+    filename: function (req, file, cb) {
+      cb(null, Date.now() + '-' + file.originalname);
+    },
+  });
+  
+  const upload = multer({ storage: storage }); 
+
 
 const port = 3000;
 app.set('view engine', 'ejs');
@@ -42,51 +58,41 @@ app.get('/usuario/inserir', (req, res)=>{
     usuarioController.usuarioCadastro(req, res);
 });
 
-app.get('/home',(req, res) => {
+app.get('/home',autenticacao,(req, res) => {
     app.set('layout', "./layout/Default/index");
     usuarioController.home(req, res);
 });
 
-app.get('/listar', (req, res) => {
+app.get('/listar',autenticacao,(req, res) => {
     app.set('layout', "./layout/Default/index");
     homeController.getlistar(req, res);
 });
 
 
-app.get('/cadastro', (req, res)=>{
+app.get('/cadastro',autenticacao, (req, res)=>{
     app.set('layout', "./layout/Default/login");
     usuarioController.cadastroPessoa(req, res);
+  
 }); 
 
-app.post('/cadastro',(req, res)=>{
-    
+app.post('/cadastro',upload.single('Foto'),(req, res)=>{    
     cadastroPessoaController.inserePessoa(req, res);
 }); 
 
 app.post('/deletarPessoa/:id', async (req, res) => {
-    const pessoaId = req.params.id;
-    console.log(pessoaId);
-    try {
-        await cadastroModel.deletarPessoa(pessoaId);
-        res.redirect('/listar');
-    } catch (error) {
-        console.error("Erro ao deletar pessoa: ", error);
-        res.status(500).send("Erro interno");
-    }
+    deletaController. DeletaPessoa(req, res);
 });
-app.get('/edit/:id',(req, res)=>{
+app.get('/edit/:id',autenticacao,(req, res)=>{
     app.set('layout', "./layout/Default/login");
     atualizaController.mostrarFormularioEdicao(req, res);
 }) 
 
-app.post('/edit/:id', (req, res)=>{
-    app.set('layout', "./layout/Default/index");
+app.post('/edit/:id',upload.single('Foto'),(req, res)=>{
     atualizaController.editarPessoa(req, res);
 } );
 
 app.get('/sair', (req,res)=>{
-    delete req.session.user;
-    res.redirect('/');
+    deslogarController.DeslogarUsuario(req,res);
 })
 
 

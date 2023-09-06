@@ -21,17 +21,16 @@
       <div class="card__img" style='background-image: url("<%= pessoa.Foto %>");'></div>
 
       <a href="#" class="card_link">
-         <div class="card__img--hover" style='background-image: url("<%= pessoa.Foto %>");'></div>
+         <div class="card__img--hover" style='background-image: url("/upload/<%= pessoa.Foto %>");'></div>
        </a>
       <div class="card__info">
    
         <span class="card__category">RG: <%= pessoa.RG %></span><br>
         <span class="card__category">CPF: <%= pessoa.CPF %></span>
        
-        <h3 class="card__title"><%= pessoa.Nome %></h3>
-        <span class="card__category">Email: <%= pessoa.Email %></span><br>
-      
-        <span class="card__by">by <a href="#" class="card__author" title="author">site</a></span>
+        <h3 class="card__title"><%= pessoa.Nome %></h3>   
+          <span class="card__category">Nascimento: <%= pessoa.Data_nascimento %></span><br>
+        <span class="card__category">Email: <%= pessoa.Email %></span><br><br>
     <div class="d-flex">
       <form action="/deletarPessoa/<%= pessoa.idPessoa %>" method="post">
       <button class="button-31 " role="button">Deletar</button>

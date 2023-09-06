@@ -9,16 +9,16 @@
      <div class="modo-mostrar" id="logearse">
       <div class="login-contenido">
           <div class="formulario">
-            <form action="/cadastro" method="post">
+            <form action="/cadastro" method="post" enctype="multipart/form-data">
             <ul>
               <li><input type="text" placeholder="Nome" name="Nome" for="Nome"/></li>
               <li><input type="number" placeholder="CPF" name="CPF" for="CPF"/></li>
               <li><input type="number" placeholder="RG" name="RG" for="RG"/></li>
               <li><input type="email" placeholder="Email" name="Email" for="Email"/></li>
-              <li><input type="text" placeholder="Data Nascimento (2006-09-20)" name="Data_nascimento" for="Data_nascimento"/></li>
+              <li><input type="date" placeholder="Data Nascimento (2006-09-20)" name="Data_nascimento" for="Data_nascimento"/></li>
               <li>
                 <label class="mt-3">
-                  <input class="input_file" type="url" name="Foto" for="Foto" placeholder="URL"/>
+                  <input class="input_file" type="file" name="Foto" for="Foto" placeholder="URL"/>
                 </label>
               </li>
             </ul>
