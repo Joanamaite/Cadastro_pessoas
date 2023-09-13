@@ -13,18 +13,18 @@ const deslogarController = require ("./controllers/deslogarController");
 const app = express();
 const path = require('path');
 const multer = require('multer');
-app.use('/upload', express.static(__dirname + '/upload'));
+app.use('public/image/', express.static(__dirname + 'public/image/'));
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, './upload');
+      cb(null, 'public/image/');
     },
     filename: function (req, file, cb) {
       cb(null, Date.now() + '-' + file.originalname);
     },
   });
   
-  const upload = multer({ storage: storage }); 
+  const image = multer({ storage: storage }); 
 
 
 const port = 3000;
@@ -75,7 +75,7 @@ app.get('/cadastro',autenticacao, (req, res)=>{
   
 }); 
 
-app.post('/cadastro',upload.single('Foto'),(req, res)=>{    
+app.post('/cadastro',image.single('Foto'),(req, res)=>{    
     cadastroPessoaController.inserePessoa(req, res);
 }); 
 
@@ -87,7 +87,7 @@ app.get('/edit/:id',autenticacao,(req, res)=>{
     atualizaController.mostrarFormularioEdicao(req, res);
 }) 
 
-app.post('/edit/:id',upload.single('Foto'),(req, res)=>{
+app.post('/edit/:id',image.single('Foto'),(req, res)=>{
     atualizaController.editarPessoa(req, res);
 } );
 
