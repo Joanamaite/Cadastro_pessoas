@@ -6,12 +6,12 @@ async function connect() {
             return global.connection;
         }
         const connection = await mysql.createConnection({
-            url:'mysql://root:6AnLKs7iqvqz98sS86lq@containers-us-west-73.railway.app:7612/railway',
-            host: 'containers-us-west-73.railway.app',
+            url:'mysql://root:u3LYveu4ppFOTa5Ybw9K@containers-us-west-67.railway.app:7260/railway',
+            host: 'containers-us-west-67.railway.app',
             user: 'root',
             database: 'railway', 
-            password: '6AnLKs7iqvqz98sS86lq',
-            port:'7612'
+            password: 'u3LYveu4ppFOTa5Ybw9K',
+            port:'7260'
         });
 
         console.log("Conectou no MySQL!");
